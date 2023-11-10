@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #012043;
+    --header-color: #011731;
+
+    --primary-color: #093263;
+
+    --text-color: #ffffff;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: var(--bg-color);
+}
+
+
+
+     /**************/
+    /*** header ***/
+   /**************/
+
+.header {
+    width: 100%;
+    height: 110px;
+    background-color: var(--header-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.header .image {
+    width: 100%;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+     /************/
+    /*** menu ***/
+   /************/
+
+
+   
+.hidden-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    top: 0;
+    left: -105%;
+    transition: .5s linear;
+    z-index: 2;
+    transform: translateZ(0);
+}
+
+.hidden-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 60px;
+    color: var(--text-color);
+    padding: 0 25px;
+    transition: .3s ease-out;
+}
+
+.hidden-menu a:hover {
+    background-color: #59585d;
+    color: #94754e;
+}
+
+.hidden-menu-ticker {
+    display: none;
+}
+
+.btn-menu {
+    color: var(--text-color);
+    padding: 5px;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    transition: .3s ease-out;
+    z-index: 3;
+    width: 30px;
+    transform: translateZ(0);
+}
+
+.btn-menu span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 7px 0 0;
+    transition: all .1s linear .23s;
+    position: relative;
+}
+
+.btn-menu span.first {
+    margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .hidden-menu {
+    left: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+    opacity: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+    transform: rotate(-45deg);
+    top: -10px;
+}
