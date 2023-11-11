@@ -2,18 +2,29 @@
     --bg-color: #012043;
     --header-color: #011731;
 
+    --card-color: #ffff;
+
     --primary-color: #093263;
     --secondary-color: #1366cc;
     --tertiary-color: #042249;
     --fourth-color: #354a66;
 
+    --human-color: #7159b8;
+    --floran-color: #4fa569;
+    --glitch-color: #ba795e;
+    --novakid-color: #bb64a7;
+    --apex-color: #5970b7;
+    --hylotl-color: #5a9eb9;
+
     --text-color: #ffffff;
 }
 
+* {font-family: 'Open Sans', sans-serif;}
+
 body {
-    padding: 0px;
-    margin: 0px;
     background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -124,4 +135,128 @@ body {
 .hidden-menu-ticker:checked ~ .btn-menu span.third {
     transform: rotate(-45deg);
     top: -10px;
+}
+
+
+
+     /************/
+    /*** grid ***/
+   /************/
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+     /************/
+    /*** card ***/
+   /************/
+
+.card{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 32px;
+    background-color: var(--card-color);
+    width: 100%;
+    margin: 50px;
+}
+
+.card.chr {
+    justify-content: flex-start;
+}
+
+.card.explications {
+    justify-content: center;
+}
+
+.card.explications .content * {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card.explications .content h2 {
+    color: var(--primary-color);
+}
+
+.card.apex    {
+    --card-title-color: var(--apex-color);
+    --card-image: url("../images/card_img/lili-ibrahim-starbound-apex.jpg");}
+    
+.card.human   {
+    --card-title-color: var(--human-color);
+    --card-image: url("../images/card_img/lili-ibrahim-starbound-human.jpg");}
+
+.card.floran  {
+    --card-title-color: var(--floran-color);
+    --card-image: url("../images/card_img/lili-ibrahim-starbound-floran.jpg");}
+
+.card.glitch  {
+    --card-title-color: var(--glitch-color);
+    --card-image: url("../images/card_img/lili-ibrahim-starbound-glitch.jpg");}
+
+.card.novakid {
+    --card-title-color: var(--novakid-color);
+    --card-image: url("../images/card_img/lili-ibrahim-starbound-novakid.jpg");}
+
+.card.hylotl  {
+    --card-title-color: var(--hylotl-color);
+    --card-image: url("../images/card_img/lili-ibrahim-starbound-hylotl.jpg");}
+
+
+.card .image {
+    width: 25%;
+    min-height: 100%;
+    background-image: var(--card-image);
+    background-size: cover;
+    background-position: center;    
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 16px 32px;
+}
+
+.card .content p {
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.card .content p.sub-title {
+    text-decoration: underline;
+    font-size: 16pt;
+}
+
+.card .content h2 {
+    margin: 0;
+    font-size: 48pt;
+    margin-bottom: 16px;
+    color: var(--card-title-color);
 }
