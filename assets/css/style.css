@@ -17,6 +17,8 @@
     --hylotl-color: #5a9eb9;
 
     --text-color: #ffffff;
+
+    --card-image: url('../images/card_img/default-race-image.png');
 }
 
 * {font-family: 'Open Sans', sans-serif;}
@@ -37,6 +39,8 @@ body {
     width: 100%;
     height: 110px;
     background-color: var(--header-color);
+    position: fixed;
+    top: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -44,7 +48,6 @@ body {
 
 .header .image {
     width: 100%;
-    padding-right: 100px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -149,8 +152,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 150px auto;
 }
 
 .row {
@@ -166,6 +168,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow: hidden;
     width: 100%;
     height: 100%;
 }
@@ -183,7 +186,7 @@ body {
     border-radius: 32px;
     background-color: var(--card-color);
     width: 100%;
-    margin: 50px;
+    margin-top: 50px;
 }
 
 .card.chr {
@@ -260,3 +263,52 @@ body {
     margin-bottom: 16px;
     color: var(--card-title-color);
 }
+
+
+
+     /*********************/
+    /*** index content ***/
+   /*********************/
+
+.cell.index {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cell.index .card {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.cell.index .card h2 {
+    color: var(--primary-color);
+    font-size: 25pt;
+    text-decoration: underline;
+}
+
+.cell.index .card.title h2 {
+    font-size: 28pt;
+    text-decoration: none;
+}
+
+.cell.index .card p {
+    text-align: center;
+    padding: 32px 16px;
+    margin: 0;
+}
+
+.card.idoff {
+    display: flex;
+    flex-direction: column;
+    width: 47.5%;
+}
+
+.card.idoff .image {
+    background-image: var(--linkoff-image);
+    height: 200px;
+    width: 100%;
+}
+
+.card.idoff .image.start {--linkoff-image: url('https://playstarbound.com/wp-content/uploads/2016/07/watchtrailer_updated.png')}
+.card.idoff .image.end   {--linkoff-image: url('https://playstarbound.com/wp-content/uploads/2016/07/buystarbound_updated4.png')}
