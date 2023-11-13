@@ -150,28 +150,27 @@ body {
 .grid {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     width: 50%;
     margin: 150px auto;
+    gap: 32px;
 }
 
 .row {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
+    gap: 16px;
 }
 
 .cell {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow: hidden;
     width: 100%;
     height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--card-color);
 }
 
 
@@ -180,15 +179,6 @@ body {
     /*** card ***/
    /************/
 
-.card{
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    border-radius: 8px;
-    background-color: var(--card-color);
-    width: 100%;
-    margin-top: 50px;
-}
 
 .card.chr {
     justify-content: flex-start;
@@ -242,8 +232,6 @@ body {
 }
 
 .card .content {
-    display: flex;
-    flex-direction: column;
     width: 75%;
     padding: 16px 32px;
 }
@@ -271,9 +259,9 @@ body {
     /*** index content ***/
    /*********************/
 
-.cell.index {
-    flex-direction: row;
-    justify-content: space-between;
+.cell a {
+    width: 100%;
+    text-decoration: none;
 }
 
 .cell.index .card {
@@ -301,7 +289,7 @@ body {
 .card.idoff {
     display: flex;
     flex-direction: column;
-    width: 47.5%;
+    text-align: center;
 }
 
 .card.idoff .image {
@@ -310,5 +298,39 @@ body {
     width: 100%;
 }
 
+.card.idoff .image.test {
+    background-position-y: 65%;
+}
+
 .card.idoff .image.chucklefish {--card-image: url('../images/chucklefish_background.png')}
-.card.idoff .image.end   {--card-image: url('https://playstarbound.com/wp-content/uploads/2016/07/buystarbound_updated4.png')}
+.card.idoff .image.discution   {--card-image: url('../images/outpost-bg-card.jpg')}
+.card.idoff .image.test        {--card-image: url('../images/test-bg-card.jpg')}
+.card.idoff .image.list        {--card-image: url('../images/list-bg-card.jpg')}
+
+.card iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.content.textcenter {
+    text-align: center;
+}
+
+.content.index {
+    width: 100%;
+    padding: 0;
+}
+
+.content.index p {
+    padding: 16px 32px;
+}
+
+.content.index h3 {
+    color: #000000;
+}
+
+.content.index h2 {
+    --card-title-color: var(--primary-color);
+
+    text-decoration: underline;
+}
