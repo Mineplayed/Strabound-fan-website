@@ -21,20 +21,22 @@
     <div class="header">
         <div class="menu">
             <input type="checkbox" id="m1" class="hidden-menu-ticker">
-            <label class="btn-menu" for="m1">
-                <span class="first"></span>
-                <span class="second"></span>
-                <span class="third"></span>
-            </label>
+            <div class="btn-menu">
+                <label class="btn-menu-content" for="m1">
+                    <span class="first"></span>
+                    <span class="second"></span>
+                    <span class="third"></span>
+                </label>
+            </div>
             <ul class="hidden-menu">
-                <li><a href="index.html">Home</a></li>  
+                <li><a href="index.html">Accueil</a></li>  
                 <li><a href="races.html">Races</a></li>
-                <li><a href="">Portfolio</a></li>
+                <li><a href="screenshots.html">Screenshots & Fanarts</a></li>
                 <li><a href="">Catalogue</a></li>
                 <li><a href="">Contacts</a></li>  
             </ul>
         </div>
-        <div class="image">
+        <div class="image centered">
             <img src="./assets/images/logo.png" alt="Starbound's logo">
         </div>
     </div>
@@ -63,14 +65,9 @@
             </div>
         </div>
         <div class="row">
-
-            <!-- TODO: Englober la card avec le lien -->
-            <!-- TODO: Separer les cards dans des cells differente -->
-            <!-- TODO: Utiler gap plutot que des margin pour l'espassement dans les grid et row -->
-
             <div class="cell">
                 <a href="https://chucklefish.org/" target="_blank">
-                    <div class="card idoff">
+                    <div class="card official">
                         <div class="image chucklefish"></div>
                         <div class="content index textcenter">
                             <h3>Site officiel de l'equipe Chucklefish</h3>
@@ -80,10 +77,10 @@
             </div>
             <div class="cell">
                 <a href="https://community.playstarbound.com/forums/starbound-discussion.3/" target="_blank">
-                    <div class="card idoff">
+                    <div class="card official">
                         <div class="image discution"></div>
                         <div class="content index textcenter">
-                            <h3>Forum officiel de Starbound</h3>
+                            <h3>Forum officiel de la communauté Starbound</h3>
                         </div>
                     </div>
                 </a>
@@ -92,7 +89,7 @@
         <div class="row">
             <div class="cell">
                 <a href="https://www.jeuxvideo.com/jeux/pc/00044119-starbound.htm" target="_blank">
-                    <div class="card idoff">
+                    <div class="card official">
                         <div class="image test"></div>
                         <div class="content index textcenter">
                             <h3>Le test complet de JeuxVidéos.com</h3>
@@ -102,7 +99,7 @@
             </div>
             <div class="cell">
                 <a href="https://www.giantbomb.com/chucklefish-games/3010-8380/published/" target="_blank">
-                    <div class="card idoff">
+                    <div class="card official">
                         <div class="image list"></div>
                         <div class="content index textcenter">
                             <h3>Liste des jeux de Chucklefish Games</h3>

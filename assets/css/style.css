@@ -18,7 +18,7 @@
 
     --text-color: #ffffff;
 
-    --card-image: url('../images/card_img/default-race-image.png');
+    --card-image: url('../images/card_img/default-race-image.jpg');
 }
 
 * {font-family: 'Open Sans', sans-serif;}
@@ -37,7 +37,7 @@ body {
 
 .header {
     width: 100%;
-    height: 110px;
+    height: 10%;
     background-color: var(--header-color);
     position: fixed;
     top: 0;
@@ -47,10 +47,9 @@ body {
 }
 
 .header .image {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
 }
 
 
@@ -59,14 +58,25 @@ body {
     /*** menu ***/
    /************/
    
+.menu {
+    width: 10%;
+}
+
+.btn-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hidden-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: fixed;
     list-style: none;
-    padding-top: 10%;
-    padding-left: 0;
     margin: 0;
     width: 100%;
     height: 100vh;
@@ -83,7 +93,6 @@ body {
     text-transform: uppercase;
     font-size: 60px;
     color: var(--text-color);
-    padding: 0 25px;
     transition: .3s ease-out;
 }
 
@@ -96,13 +105,9 @@ body {
     display: none;
 }
 
-.btn-menu {
+.btn-menu-content {
     color: var(--text-color);
-    padding-left: 2.5%;
-    padding-top: 45px;
     position: fixed;
-    top: 5px;
-    left: 5px;
     cursor: pointer;
     transition: .3s ease-out;
     z-index: 3;
@@ -110,7 +115,7 @@ body {
     transform: translateZ(0);
 }
 
-.btn-menu span {
+.btn-menu-content span {
     display: block;
     height: 3px;
     background-color: var(--fourth-color);
@@ -119,7 +124,7 @@ body {
     position: relative;
 }
 
-.btn-menu span.first {
+.btn-menu-content span.first {
     margin-top: 0;
 }
 
@@ -173,20 +178,14 @@ body {
     background-color: var(--card-color);
 }
 
+.centered {justify-content: center;}
+.lefted   {justify-content: flex-start;}
+.righted  {justify-content: flex-end;}
 
 
      /************/
     /*** card ***/
    /************/
-
-
-.card.chr {
-    justify-content: flex-start;
-}
-
-.card.explications {
-    justify-content: center;
-}
 
 .card.explications .content * {
     display: flex;
@@ -194,33 +193,34 @@ body {
     text-align: center;
 }
 
-.card.explications .content h2 {
-    color: var(--primary-color);
-}
-
 .card.apex    {
     --card-title-color: var(--apex-color);
-    --card-image: url("../images/card_img/lili-ibrahim-starbound-apex.jpg");}
+    --card-image: url("../images/card_img/races/lili-ibrahim-starbound-apex.jpg");}
     
 .card.human   {
     --card-title-color: var(--human-color);
-    --card-image: url("../images/card_img/lili-ibrahim-starbound-human.jpg");}
+    --card-image: url("../images/card_img/races/lili-ibrahim-starbound-human.jpg");}
 
 .card.floran  {
     --card-title-color: var(--floran-color);
-    --card-image: url("../images/card_img/lili-ibrahim-starbound-floran.jpg");}
+    --card-image: url("../images/card_img/races/lili-ibrahim-starbound-floran.jpg");}
 
 .card.glitch  {
     --card-title-color: var(--glitch-color);
-    --card-image: url("../images/card_img/lili-ibrahim-starbound-glitch.jpg");}
+    --card-image: url("../images/card_img/races/lili-ibrahim-starbound-glitch.jpg");}
 
 .card.novakid {
     --card-title-color: var(--novakid-color);
-    --card-image: url("../images/card_img/lili-ibrahim-starbound-novakid.jpg");}
+    --card-image: url("../images/card_img/races/lili-ibrahim-starbound-novakid.jpg");}
 
 .card.hylotl  {
     --card-title-color: var(--hylotl-color);
-    --card-image: url("../images/card_img/lili-ibrahim-starbound-hylotl.jpg");}
+    --card-image: url("../images/card_img/races/lili-ibrahim-starbound-hylotl.jpg");}
+
+.card.screenshots {
+    --card-tilte-color: var(--primary-color);
+    width: 100%;
+}
 
 
 .card .image {
@@ -251,7 +251,12 @@ body {
     font-size: 48pt;
     margin-bottom: 16px;
     color: var(--card-title-color);
+    text-decoration: underline;
 }
+
+.content.index h2              {--card-title-color: var(--primary-color);}
+.content.screenshots h2        {--card-title-color: var(--primary-color);}
+.card.explications .content h2 {--card-title-color: var(--primary-color);}
 
 
 
@@ -269,12 +274,6 @@ body {
     align-items: center;
 }
 
-.cell.index .card h2 {
-    color: var(--primary-color);
-    font-size: 25pt;
-    text-decoration: underline;
-}
-
 .cell.index .card.title h2 {
     font-size: 28pt;
     text-decoration: none;
@@ -286,30 +285,31 @@ body {
     margin: 0;
 }
 
-.card.idoff {
+.card.official {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.card.idoff .image {
+.card.official .image {
     background-image: var(--card-image);
     height: 200px;
     width: 100%;
 }
 
-.card.idoff .image.test {
+.card.official .image.test {
     background-position-y: 65%;
 }
 
-.card.idoff .image.chucklefish {--card-image: url('../images/chucklefish_background.png')}
-.card.idoff .image.discution   {--card-image: url('../images/outpost-bg-card.jpg')}
-.card.idoff .image.test        {--card-image: url('../images/test-bg-card.jpg')}
-.card.idoff .image.list        {--card-image: url('../images/list-bg-card.jpg')}
+.card.official .chucklefish {--card-image: url('../images/chucklefish_background.jpg')}
+.card.official .discution   {--card-image: url('../images/outpost-bg-card.jpg')}
+.card.official .test        {--card-image: url('../images/test-bg-card.jpg')}
+.card.official .list        {--card-image: url('../images/list-bg-card.jpg')}
 
 .card iframe {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 
 .content.textcenter {
@@ -327,10 +327,4 @@ body {
 
 .content.index h3 {
     color: #000000;
-}
-
-.content.index h2 {
-    --card-title-color: var(--primary-color);
-
-    text-decoration: underline;
 }
