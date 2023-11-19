@@ -8,6 +8,8 @@
     --secondary-color: #1366cc;
     --tertiary-color: #042249;
     --fourth-color: #354a66;
+    --fifth-color: #0a2446;
+    --sixth-color: #13325e;
 
     --human-color: #7159b8;
     --floran-color: #4fa569;
@@ -30,7 +32,6 @@ body {
 }
 
 
-
      /**************/
     /*** header ***/
    /**************/
@@ -41,8 +42,6 @@ body {
     background-color: var(--header-color);
     position: fixed;
     top: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
     display: flex;
 }
 
@@ -50,6 +49,38 @@ body {
     width: 80%;
     display: flex;
     flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.header .nav button {
+    font-size: 16pt;
+    border:none;
+    padding:16px 40px 16px 40px;
+    margin-bottom: 10px;
+      box-shadow:0px 10px 0px 0px var(--sixth-color), 
+        0px 0px 10px 0px var(--fifth-color);
+    color:white;
+    background: var(--fifth-color);
+    cursor:pointer;
+    transition:all 0.16s;
+    position:relative;
+    top:0;
+}
+
+.header .nav .btnleft {
+    border-top-left-radius: 8px;
+}
+
+.header .nav button:active{
+  box-shadow: 0px 5px 0px 0px var(--secondary-color);
+  top:5px;
 }
 
 
@@ -60,6 +91,8 @@ body {
    
 .menu {
     width: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .btn-menu {
@@ -99,6 +132,12 @@ body {
 .hidden-menu a:hover {
     background-color: var(--tertiary-color);
     color: var(--secondary-color);
+}
+
+.hidden-menu .scrt a:hover {
+    background-image: url(../images/glitch.gif);
+    color: red;
+    font-size: 200pt;
 }
 
 .hidden-menu-ticker {
@@ -217,12 +256,6 @@ body {
     --card-title-color: var(--hylotl-color);
     --card-image: url("../images/card_img/races/lili-ibrahim-starbound-hylotl.jpg");}
 
-.card.screenshots {
-    --card-tilte-color: var(--primary-color);
-    width: 100%;
-}
-
-
 .card .image {
     width: 25%;
     min-height: 100%;
@@ -254,9 +287,9 @@ body {
     text-decoration: underline;
 }
 
-.content.index h2              {--card-title-color: var(--primary-color);}
-.content.screenshots h2        {--card-title-color: var(--primary-color);}
+.content.title h2              {--card-title-color: var(--primary-color);}
 .card.explications .content h2 {--card-title-color: var(--primary-color);}
+.card.vids .content h2         {--card-title-color: var(--primary-color);}
 
 
 
@@ -269,42 +302,38 @@ body {
     text-decoration: none;
 }
 
-.cell.index .card {
+.cell.column .card {
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
-.cell.index .card.title h2 {
+.cell.column .card.title h2 {
     font-size: 28pt;
     text-decoration: none;
 }
 
-.cell.index .card p {
+.cell.cell.column .card p {
     text-align: center;
     padding: 32px 16px;
     margin: 0;
 }
 
-.card.official {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
 
-.card.official .image {
+.cell.column .card .image {
     background-image: var(--card-image);
     height: 200px;
     width: 100%;
 }
 
-.card.official .image.test {
+.cell.column .card .image.test {
     background-position-y: 65%;
 }
 
-.card.official .chucklefish {--card-image: url('../images/chucklefish_background.jpg')}
-.card.official .discution   {--card-image: url('../images/outpost-bg-card.jpg')}
-.card.official .test        {--card-image: url('../images/test-bg-card.jpg')}
-.card.official .list        {--card-image: url('../images/list-bg-card.jpg')}
+.cell.column .card .chucklefish {--card-image: url('../images/chucklefish_background.jpg')}
+.cell.column .card .discution   {--card-image: url('../images/outpost-bg-card.jpg')}
+.cell.column .card .test        {--card-image: url('../images/test-bg-card.jpg')}
+.cell.column .card .list        {--card-image: url('../images/list-bg-card.jpg')}
 
 .card iframe {
     width: 100%;
